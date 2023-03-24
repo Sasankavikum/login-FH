@@ -1,0 +1,26 @@
+<h1 class="m-5">Dashboard</h1>
+
+<button class="m-5" (click)="onClick()">Click here</button>
+
+<div>
+  <table class="table table-bordered m-5">
+    <thead *ngIf="data">
+      <th>ID</th>
+      <th>NAME</th>
+      <th>URL</th>
+      <th>STATUS</th>
+      <th>CREATE DATE</th>
+      <th>EXP DATE</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.url }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.created_at }}</td>
+        <td>{{ item.expiry_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
